@@ -4,5 +4,7 @@ script:
   - where wsl
   - where wslconfig
   - wslconfig /l
+  - dir
   - powershell -File install.ps1 -Distro Ubuntu-18.04
+  - dir
   - wslconfig /l
