@@ -5,6 +5,7 @@ script:
   - where wslconfig
   - wslconfig /l
   - dir
-  - powershell -File install.ps1 -Distro Ubuntu-18.04
+  - powershell -Command Get-ExecutionPolicy
+  - powershell -ExecutionPolicy RemoteSigned -File install.ps1 -Distro Ubuntu-18.04
   - dir
   - wslconfig /l
