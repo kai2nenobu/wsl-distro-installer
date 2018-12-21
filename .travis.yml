@@ -1,0 +1,7 @@
+os: windows
+script:
+  - where wsl
+  - where wslconfig
+  - wslconfig /l
+  - powershell -File install.ps1 -Distro Ubuntu-18.04
+  - wslconfig /l
