@@ -1,10 +1,13 @@
 os: windows
 language: shell  # MEANINGLESS!
+env:
+  - DISTRO=Ububntu-18.04
+  - DISTRO=Debian
 before_script:
   - env
   - where wsl
   - where wslconfig
 script:
-  - powershell -ExecutionPolicy RemoteSigned -File install.ps1 -Distro Ubuntu-18.04
+  - powershell -ExecutionPolicy RemoteSigned -File install.ps1 -Distro "$DISTRO"
   - powershell -Command "wslconfig /l"
   - wsl cat /etc/os-release
