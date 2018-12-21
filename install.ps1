@@ -1,5 +1,5 @@
 Param(
-  [ValidateSet('Ubuntu-18.04', 'Debian')][string]$Distro
+  [ValidateSet('Ubuntu-18.04', 'Debian', 'Kali', 'OpenSUSE')][string]$Distro
 )
 
 Set-StrictMode -Version Latest
@@ -17,6 +17,16 @@ $Distros = @{
     'Name' = 'Debian'
     'PackageUrl' = 'https://aka.ms/wsl-debian-gnulinux'
     'Exe' = 'debian.exe'
+  };
+  'Kali' = @{  # DO NOT WORK!
+    'Name' = 'Kali'
+    'PackageUrl' = 'https://aka.ms/wsl-kali-linux'
+    'Exe' = 'kali.exe'
+  };
+  'OpenSUSE' = @{  # DO NOT WORK!
+    'Name' = 'openSUSE-42'
+    'PackageUrl' = 'https://aka.ms/wsl-opensuse-42'
+    'Exe' = 'openSUSE-42.exe'
   };
 }
 
