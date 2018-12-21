@@ -4,6 +4,7 @@ Param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+$ProgressPreference = "SilentlyContinue"
 
 $InstallLocation = Join-Path ${env:LOCALAPPDATA} 'WSL'
 $Distros = @{
