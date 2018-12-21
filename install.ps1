@@ -32,7 +32,7 @@ $Distros = @{
 
 $distroArchive = $Distros[$Distro]['Name'] + '.zip'
 $distroUrl = $Distros[$Distro]['PackageUrl']
-$distroPath = Join-Path $InstallLocation $distroName
+$distroPath = Join-Path $InstallLocation $Distros[$Distro]['Name']
 $distroExe = Join-Path $distroPath $Distros[$Distro]['Exe']
 
 ## Download a distro package
