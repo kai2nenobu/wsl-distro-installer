@@ -1,8 +1,11 @@
 os: windows
 language: shell  # MEANINGLESS!
 env:
-  - DISTRO=Ubuntu-18.04
-  - DISTRO=Debian
+  global:
+    - MSYS2_ARG_CONV_EXCL=*  # Prevent a path conversion by MSYS2
+  matrix:
+    - DISTRO=Ubuntu-18.04
+    - DISTRO=Debian
 before_script:
   - env
   - where wsl
