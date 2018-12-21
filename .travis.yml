@@ -2,13 +2,10 @@ os: windows
 language: shell  # MEANINGLESS!
 before_script:
   - env
-script:
   - where wsl
   - where wslconfig
+script:
   - powershell -Command "wslconfig /l"
-  - dir
-  - powershell -Command Get-ExecutionPolicy
   - powershell -ExecutionPolicy RemoteSigned -File install.ps1 -Distro Ubuntu-18.04
-  - dir
   - powershell -Command "wslconfig /l"
-  - powershell -Command "wsl cat /etc/os-release"
+  - wsl cat /etc/os-release
