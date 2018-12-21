@@ -11,3 +11,4 @@ script:
   - powershell -ExecutionPolicy RemoteSigned -File install.ps1 -Distro Ubuntu-18.04
   - dir
   - powershell -Command "wslconfig /l"
+  - powershell -Command "wsl cat /etc/os-release"
